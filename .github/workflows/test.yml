@@ -1,1 +1,15 @@
 
+name: test pipeline
+on: 
+ push:
+   branches:
+     - master
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: display message
+        run: echo "hello github"
+      - name: list files
+        run: ls
